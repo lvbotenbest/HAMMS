@@ -50,13 +50,16 @@ utils.py: Utility functions.
 ```
 
 📂 Data Preparation
+
 Text Data
 Prepare your dataset in a text file. 
 
 🚀 Training
+
 To train the model (e.g., using LLaMA-3-8B as backbone), first run save_model_bin.py to obtain a stably initialized model containing the hyper structure, and then use the provided run_train.sh script.
 
 Step 1: Initialize Hyper-Structure
+
 Run the initialization script to prepare the model weights:
 ```bash
 python save_model_bin.py \
@@ -66,6 +69,7 @@ python save_model_bin.py \
 ```
 
 Step 2: Start Training
+
 Use the initialized model path from Step 1 in your training script:
 
 ```bash
@@ -73,6 +77,7 @@ bash run_train.sh
 ```
 
 Manual Command:
+
 ```bash
 python train.py \
     --train_dataset ./data/train.txt \
@@ -89,7 +94,8 @@ python train.py \
     --use_img true \
     --hyper_classification true \
     --hyper_classification_loss_ratio 0.4
-  ``` 
+  ```
+
 📊 Inference & Evaluation
 
 To generate summaries and calculate ROUGE scores, use run_test.sh.
@@ -110,6 +116,7 @@ CUDA_VISIBLE_DEVICES=0 python test.py \
 The script will automatically compute ROUGE-1, ROUGE-2, and ROUGE-L scores after generation.
 
 📝 Citation
+
 If you use this code or dataset in your work, please cite our ACL 2025 paper:
 ```
 @inproceedings{liu-etal-2025-language,
