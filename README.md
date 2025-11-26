@@ -25,6 +25,7 @@ conda activate lcmha
 
 # 2. Install the LOCAL customized transformers library
 # (Ensure you are in the project root directory containing the 'transformers' folder)
+cd transformers-4.44.0
 pip install -e ./transformers
 
 # 3. Install other dependencies
