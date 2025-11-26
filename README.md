@@ -54,17 +54,20 @@ Text Data
 Prepare your dataset in a text file. 
 
 🚀 Training
-To train the model (e.g., using LLaMA-3-8B as backbone), you can use the provided run_train.sh script.
+To train the model (e.g., using LLaMA-3-8B as backbone), first run save_model_bin.py to obtain a stably initialized model containing the hyper structure, and then use the provided run_train.sh script.
 
-Important Arguments:
+Step 1: Initialize Hyper-Structure
+Run the initialization script to prepare the model weights:
 ```bash
-* --use_hyper true : Activates the Hyper Adapter module.
-* --hyper_classification true : Enables the language regularization task
-* --hyper_classification_loss_ratio 0.4: The weight ($\alpha$) for the regularization loss.
-* --lora_train_hyper true: Trains the hypernetwork alongside LoRA adapters.
+python save_model_bin.py \
+    --model_name_or_path /path/to/original/llama-3 \
+    --new_structural_model_path /path/to/save/init_model \
+    --use_hyper true
 ```
 
-Bash
+Step 2: Start Training
+Use the initialized model path from Step 1 in your training script:
+
 ```bash
 bash run_train.sh
 ```
