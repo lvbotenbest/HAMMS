@@ -55,11 +55,11 @@ utils.py: Utility functions.
 Text Data
 Prepare your dataset in a text file. 
 
-The text data is in our data folder.
+* The text data is in our data folder.
 
-Image Data & Visual Features. Image data can be collected following the SOV-MAS project [images_crawl](https://github.com/XL2248/SOV-MAS/tree/main/images_crawl). 
+* Image Data & Visual Features. Image data can be collected following the SOV-MAS project [images_crawl](https://github.com/XL2248/SOV-MAS/tree/main/images_crawl). 
 
-For visual feature extraction, we follow the SOV-MAS pipeline as well, specifically: [extract_roi4all_lang.sh](https://github.com/XL2248/SOV-MAS/blob/main/feature_extraction/extract_roi4all_lang.sh).  
+* For visual feature extraction, we follow the SOV-MAS pipeline as well, specifically: [extract_roi4all_lang.sh](https://github.com/XL2248/SOV-MAS/blob/main/feature_extraction/extract_roi4all_lang.sh).  
 
 
 
