@@ -7,12 +7,6 @@ This repository contains the official implementation of the paper:
 
 **LCMHA** improves many-to-many multimodal summarization (M3S) by using a **Language Constrained Hypernetwork** to generate language-specific adapter weights. This allows the model to balance shared multimodal knowledge with language-specific patterns, preventing interference between languages.
 
-## 🌟 Key Features
-* **Hypernetwork-based Adapters:** Generates dynamic weights for adapters based on source/target language embeddings.
-* **Language Regularization:** A classification loss ensures the hypernetwork learns distinct language representations.
-* **Multimodal Fusion:** Integrates visual features (Faster R-CNN) with text using a joint multimodal adapter.
-
-
 ## 🛠️ Installation
 
 ### 1. Environment Setup
